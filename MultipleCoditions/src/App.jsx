@@ -1,9 +1,10 @@
-// import { useState } from "react";
-import Usesr from "./Usesr";
-import College from "./College";
-import Student from "./Student";
-import User from "./User";
-import Wrapper from "./Wrapper";
+import { useState } from "react";
+import Skillls from "./Skillls";
+// import Usesr from "./Usesr";
+// import College from "./College";
+// import Student from "./Student";
+// import User from "./User";
+// import Wrapper from "./Wrapper";
 /*
 function App() {
     const [count, setCount] = useState(0);
@@ -91,16 +92,85 @@ function App() {
   );
 }
 export default App;
-*/
 
 function App() {
     return (
+        // Styling the element using Css
         <div >
             <h1>Props in React Js</h1>
             <Wrapper>
                 <h1>Hello Everyone</h1>
             </Wrapper>
+            <Wrapper>
+                <h1>Hello Everyone</h1>
+            </Wrapper>
+            <Wrapper>
+                <h1>Hello Everyone</h1>
+            </Wrapper>
+            <Wrapper>
+                <h1>Hello Everyone</h1>
+            </Wrapper>
+            <Wrapper>
+                <h1>Hello Everyone</h1>
+            </Wrapper>
+
         </div>
     )
 }
+export default App;
+*/
+
+/* get the iinput Value 
+
+function App() {
+    const [val,setVal]=useState("Muhtadeer")
+    return (
+        <div>
+            <h1>Get Input field Value</h1>
+            <input type="text" value={val} onChange={(event)=>setVal(event.target.value)} placeholder="Enter User Name" />
+            <h1>{val}</h1>
+            <button onClick={()=>setVal("")}>Clear Value</button>
+        </div>
+    )
+}
+export default App;
+
+
+// to build the controller Component tht controls the form with input elements.
+function App() {
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+
+    return(
+        <>
+            <h1>Controller Component</h1>
+            <form action="" method="get">
+                <input type="text" value={name} onChange={(event)=>setName(event.target.value)} placeholder="Enter the name"/>
+                <br /><br />
+                <input type="password" value={password} onChange={(event)=>setPassword(event.target.value)} placeholder="Enter the Password"/>
+                <br /><br />
+                <input type="email" value={email} onChange={(event)=>setEmail(event.target.value)} placeholder="Enter the email"/>
+                <br /><br />
+                <button>Submit</button>
+                <button onClick={()=>{setName('');setPassword('');setEmail('')}}>Clear</button>
+                <h3>{name}</h3>
+                <h3>{password}</h3>
+                <h3>{email}</h3>
+            </form>
+        </>
+    )
+}
+export default App;
+*/
+
+function App() {
+    return(
+        <div>
+            <h1>Handle Checkbox in React js</h1>
+            <Skillls></Skillls>
+        </div>
+    )
+}
+
 export default App;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Skillls from "./Skillls";
 // import Usesr from "./Usesr";
 // import College from "./College";
@@ -168,7 +168,7 @@ function App() {
     return(
         <div>
             <h1>Handle Checkbox in React js</h1>
-            <Skillls></Skillls>
+            <Skillls />
         </div>
     )
 }

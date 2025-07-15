@@ -1,5 +1,6 @@
 // import { useState } from "react";
-import Skillls from "./Skillls";
+// import User from "./Users"
+// import Skillls from "./Skillls";
 // import Usesr from "./Usesr";
 // import College from "./College";
 // import Student from "./Student";
@@ -162,7 +163,8 @@ function App() {
     )
 }
 export default App;
-*/
+
+
 
 function App() {
     return(
@@ -173,4 +175,270 @@ function App() {
     )
 }
 
+export default App;
+
+
+
+function App() {
+
+    const [gender, setGender] = useState('')
+    const [city, setCity] = useState('')
+    return (
+        <div>
+
+            <h1>Handle the radio buttons and Drop downs</h1>
+            <h4>Select Gender</h4>
+            <input value={"male"} onChange={(event)=>setGender(event.target.value)} type="radio" name="gender" id="male" /> 
+            <label htmlFor="male">Male</label>
+            <input value={"female"} onChange={(event)=>setGender(event.target.value)} type="radio" name="gender" checked={gender=='female'} id="male" />
+            <label htmlFor="male" >Female</label>
+            <h4>Selected Gender :{gender}</h4>
+
+            <br></br>
+            <h4>Select the appropirate City</h4>
+            <select onChange={(event)=>setCity(event.target.value)} defaultValue={"nepal"}>
+                <option value="nepal">Nepal</option>
+                <option value="uae">UAE</option>
+                <option value="us">USA</option>
+                <option value="un">UN</option>
+
+            </select>
+        </div>
+    )
+}
+
+export default App;
+
+
+function App() {
+  const userNames = ["anil", "sam", "loakath"];
+  const userData = [
+    {
+      name: "anil",
+      age: "25",
+      email: "anil@gmail.com",
+      id: 1,
+    },
+    {
+      name: "sam",
+      age: "36",
+      email: "sam@test.com",
+      id: 2,
+    },
+    {
+      name: "loakath",
+      age: "77",
+      email: "lock@test.com",
+      id: 3,
+    },
+  ];
+
+  return (
+    <div>
+      <h1>loop in jsx with Map Function</h1>
+      <table border="1">
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+          </tr>
+        </thead>
+        <tbody>
+          {userData.map((user) => (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.age}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <br></br>
+      <h4>Dummy Data</h4>
+      <table border="1">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>anil</td>
+            <td>anil@test.com</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>anil</td>
+            <td>anil@test.com</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default App;
+
+
+function App() {
+  const userData = [
+    {
+      name: "anil",
+      age: "25",
+      email: "anil@gmail.com",
+      id: 1,
+    },
+    {
+      name: "sam",
+      age: "36",
+      email: "sam@test.com",
+      id: 2,
+    },
+    {
+      name: "loakath",
+      age: "77",
+      email: "lock@test.com",
+      id: 3,
+    },
+  ];
+  return(
+    <div>
+        <h4>Reuse the div components in Loop</h4>
+        {
+            userData.map((user)=> (
+                <div key={user.id}>
+                    <User data={user}/>
+                </div>
+            ))
+        }
+        
+    </div>
+  )
+}
+export default App;
+
+// making clock 
+import Clock from "./Clock"
+import { useState } from "react";
+function App() {
+
+    const [color, setColor] = useState('red'); 
+    return(
+        <>
+            <h1>The First Clock in React JS</h1>
+            <Clock color={color}/>
+
+            <select onChange={(event)=> setColor(event.target.value)}>
+                <option value={"red"}>Red</option>
+                <option value={"blue"}>Blue</option>
+                <option value={"orange"}>Orange</option>
+                <option value={"green"}>Green</option>
+            </select>
+        </>
+    )
+}
+export default App;
+*/
+
+function App() {
+  const collegeData = [
+    {
+      name: "IET alwar",
+      city: "Alwar",
+      website: "www.iet.com",
+      student: [
+        {
+          name: "anil",
+          age: "34",
+          email: "anil@gmail.com"
+        },
+        {
+          name: "petre",
+          age: "43",
+          email: "peter@gmail.com"
+        },
+        {
+          name: "abi",
+          age: "12",
+          email: "abi@gmail.com"
+        }
+      ]
+    },
+    {
+      name: "IIT Delhi",
+      city: "Delhi",
+      website: "www.iit.com",
+      student: [
+        {
+          name: "anil",
+          age: "34",
+          email: "anil@gmail.com"
+        },
+        {
+          name: "petre",
+          age: "43",
+          email: "peter@gmail.com"
+        },
+        {
+          name: "abi",
+          age: "12",
+          email: "abi@gmail.com"
+        }
+      ]
+    },
+    {
+      name: "KCIET Hisar",
+      city: "Hisar",
+      website: "www.kciet.com",
+      student: [
+        {
+          name: "anil",
+          age: "34",
+          email: "anil@gmail.com"
+        },
+        {
+          name: "petre",
+          age: "43",
+          email: "peter@gmail.com"
+        },
+        {
+          name: "abi",
+          age: "12",
+          email: "abi@gmail.com"
+        }
+      ]
+    }
+  ]
+  return(
+    <div>
+      <h1>Nested Looping with Component</h1>
+      {
+        collegeData.map((college, index)=> (
+          <div key={index}>
+            <h1>Name: {college.name}</h1>
+            <ul>
+              <li>
+                <h3>City: {college.city}</h3>
+              </li>
+              <li>
+                <h3>Website: {college.website}</h3>
+              </li>
+              
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  )
+}
 export default App;

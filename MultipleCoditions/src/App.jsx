@@ -348,8 +348,8 @@ function App() {
     )
 }
 export default App;
-*/
 
+import College from "./College";
 function App() {
   const collegeData = [
     {
@@ -420,25 +420,48 @@ function App() {
     }
   ]
   return(
-    <div>
+    <div style={{
+      backgroundColor: "#111",
+      padding: "20px",
+      borderBottom: "2px solid ",
+      margin: "20px",
+      borderRadius: "10px"
+    }}>
       <h1>Nested Looping with Component</h1>
       {
         collegeData.map((college, index)=> (
           <div key={index}>
-            <h1>Name: {college.name}</h1>
-            <ul>
-              <li>
-                <h3>City: {college.city}</h3>
-              </li>
-              <li>
-                <h3>Website: {college.website}</h3>
-              </li>
-              
-            </ul>
+            <College  college={college}/>
           </div>
         ))
       }
     </div>
   )
 }
+export default App;
+*/
+import Counter from "./Counter";
+import { useEffect, useState } from "react";
+function App() {
+
+  const [counter, setCounter] = useState(0);
+  const [data, setData] = useState(0);
+
+  useEffect(()=>{
+    callOnce();
+  }, [])
+  function callOnce() {
+    console.log("CallOnce function called")
+  }
+  return (
+    <>
+      <h1>UseEffect of Hook</h1>
+      <button onClick={()=>setCounter(counter+1)}>Counter{counter}</button>
+      <button onClick={()=>setData(data+1)}>Data {data}</button>
+      <Counter />
+    </>
+  )
+
+}
+
 export default App;

@@ -29,6 +29,8 @@ function App() {
  export default App;
  */
 
+// import { useState } from "react";
+
 //  Props in javaScript
 /*   This is the normal method to pass the props but these are the static things 
 function App() {
@@ -484,5 +486,172 @@ function App() {
   )
 }
 
-export default App;*/
+export default App;
 
+
+import { useState } from "react";
+function App() {
+  const [cardStyle, setCardStyle] = useState( 
+    {
+      border: "2px solid grey",
+      width: "250px",
+      boxShadow: "1px 1px black",
+      margin: "10px",
+    }
+  )
+  const [grid, setGrid] = useState(true)
+  const [textColor, setTextColor] = useState('green')
+  const updateTheme = (bgColor, textColor)=> {
+    setCardStyle({...cardStyle, backgroundColor:bgColor})
+    setTextColor(textColor)
+  }
+  return (
+    <>
+      <h1 style={{ color: "red" }}>Inline style in the React JS</h1>
+      <button onClick={()=>updateTheme('gray', 'pink')}>Gray Theme</button>
+      <button onClick={()=> updateTheme('white', 'yellow')}>Default Theme</button>
+      <button onClick={()=> setGrid(!grid)}>Toggle Grid</button>
+      <div style={{display: grid?'flex': 'block' , flexWrap: "wrap", JustifyContent: 'center'}}>
+        <div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div>
+        <div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div><div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div><div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div><div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div><div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div><div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div><div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div><div style={cardStyle}>
+          <img
+            style={{ width: "250px" }}
+            src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          />
+          <div
+            style={{
+              padding: "5px",
+              color: textColor
+            }}
+          >
+            <h1>Muqhtadeer</h1>
+            <p>SDE</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+export default App;
+*/
+
+function App() {
+  return (
+    <>
+      
+    </>
+  )
+}
+export default App;

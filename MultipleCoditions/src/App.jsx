@@ -645,13 +645,211 @@ function App() {
   );
 }
 export default App;
-*/
+
 
 function App() {
   return (
     <>
+      <h1 className="heading">External Style</h1>
+      <div className="container">
+        <div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div>
+        <div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div>
+        <div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div><div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div><div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div><div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div><div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div><div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div><div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div><div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div><div className="user-card">
+          <div>
+            <img
+              className="img-style"
+              src="https://media.istockphoto.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8="
+            />
+          </div>
+          <div className="text-wrap">
+            <h4>Muqhtadeer</h4>
+            <p>Software Dev</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+export default App;
+
+
+
+// using modules 
+import UserProfile from "./userProfile";
+function App() {
+  return (
+    <>
+      <h1>Style with CSS Modules in React</h1>
+      <h1 >User Profile</h1>
+      <div  style={{display: "flex", flexWrap: "wrap"}}>
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+// import styled from "styled-components"
+// function App() {
+
+  // const Heading = styled.h1`
+  // color: red;
+  // border: 1px solid green;
+  // borderRadius: 5px;
+  // margin: 20px;
+  // padding: 20px
+  // `
+  // another method is given below to syle the component
+
+  const Heading = styled. h1({
+    color: 'red',
+    border: '1px solid green',
+    borderRadius: '5px',
+    margin: '20px',
+    padding: '20px'
+  });
+
+  const StyleBtn = styled.button `
+  color:red;
+  width:130px;
+  height:40px;
+  margin:20px;
+  border:1px dotted black;
+  border-radius: 10px;
+
+  `
+  return (
+    <>
+      <h1>Styled Component with Reactjs</h1>
+      <Heading>Ghheno</Heading>
+      <Heading>Godd ngjg</Heading>
+      <Heading>Godd ngjg</Heading>
+      <Heading>Godd ngjg</Heading>
+      <StyleBtn>Login</StyleBtn>
+      <StyleBtn>Sign up</StyleBtn>
+      <StyleBtn>Register</StyleBtn>
       
+
     </>
   )
 }
 export default App;
+*/
+

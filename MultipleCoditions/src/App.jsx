@@ -1,5 +1,5 @@
 // import { useState } from "react";
-// import User from "./Users"
+// import User from "./Users";
 // import Skillls from "./Skillls";
 // import Usesr from "./Usesr";
 // import College from "./College";
@@ -851,5 +851,5 @@ export default App;
   )
 }
 export default App;
-*/
 
+*/

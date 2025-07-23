@@ -1,4 +1,4 @@
-import { use } from "react";
+// import { useRef } from "react";
 import "./App.css";
 /*
 // to build the controller Component tht controls the form with input elements.
@@ -53,9 +53,12 @@ function App() {
   );
 }
 export default App;
-*/
+
 
 function App() {
+  const userRef = useRef();
+  const passwordRef = useRef();
+
   const handleForm = (event)=> {
     event.preventDefault();
     const user = document.querySelector("#user").value;
@@ -66,8 +69,10 @@ function App() {
 
   const handleFormRef = (event)=> {
     event.preventDefault();
-    console.log("handleFormRef");
-    
+    const user = userRef.current.value
+    const password = passwordRef.current.value
+    console.log("handleFormRef",user, password);
+  
     
   }
   return (
@@ -84,13 +89,33 @@ function App() {
 
       <h1>uncontrolled component with useRef</h1>
       <form action='' method="post" onSubmit={handleFormRef}>
-        <input type="email" id="email" placeholder="Enter the email"/>
+        <input type="email" ref={userRef}  id="userRef" placeholder="Enter the email"/>
         <br />
-        <input type="password" id="passwords" placeholder="Password"/>
+        <input type="password" ref={passwordRef} id="passwordRef" placeholder="Password"/>
         <br />
-        <button>Submit</button>
+        <button>SubmitRef</button>
       </form>
     </>
   );
+}
+export default App;
+*/
+
+import  User from "./User";
+function App() {
+  
+  const displayName=(name)=>{
+    alert(name)
+  }
+
+  const getUser=()=> {
+    alert("get user function called")
+  }
+  return(
+    <>
+      <h1>Call parent Function from child component</h1>
+      <User displayName={displayName} name="Muqhtadeer" onClick={getUser} />
+    </>
+  )
 }
 export default App;

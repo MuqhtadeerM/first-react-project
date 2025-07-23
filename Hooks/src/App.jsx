@@ -1,3 +1,4 @@
+/*
 import { useRef } from "react"
 
 function App() {
@@ -35,5 +36,59 @@ function App() {
     </>
   )
 }
-
 export default App
+
+
+// Using the forwordRef in React
+import { useRef } from "react"
+import UserInput from "./UserInput";
+
+export default function App() {
+  const inputRef  = useRef(null)
+  const updateInput = ()=> {
+    inputRef.current.value=1000;
+    inputRef.current.focus();
+    inputRef.current.style.color="red"
+  }
+  return(
+    <div>
+      <h1>Forward Ref</h1>
+      This is the old method used before react 19 but we can use it in react 19 but we cant use it in react 20 
+      <UserInput ref={inputRef}/> 
+      <button onClick={ updateInput }>Update Input Field</button>
+    </div>
+  )
+}
+
+*/
+import {useFormStatus} from 'react-dom'
+export default function App() {
+  const handleSubmit = async ()=>{
+    await new Promise(res=>setTimeout(res, 4000));
+    console.log("submit");
+  }
+
+
+  function LoginFun() {
+    const {pending} = useFormStatus();
+    console.log(pending);
+    
+    return(
+      <div>
+        <input type="text" placeholder="Enter user" />
+        <br />
+        <input type="password" placeholder="Enter Password" />
+        <br />
+        <button disabled={pending}>{pending? 'Submitting' : 'Submit'}</button>
+      </div>
+    )
+  }
+  return (
+    <>
+      <h1>useFormStatus Hooks in React js 19</h1>
+      <form method="post"  action={handleSubmit}>
+        <LoginFun />
+      </form>
+    </>
+  );
+}

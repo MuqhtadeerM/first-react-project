@@ -60,14 +60,17 @@ export default function App() {
   )
 }
 
-*/
+
+
+// this is used when we submiting the button like submitting....
+
 import {useFormStatus} from 'react-dom'
 export default function App() {
+
   const handleSubmit = async ()=>{
     await new Promise(res=>setTimeout(res, 4000));
     console.log("submit");
   }
-
 
   function LoginFun() {
     const {pending} = useFormStatus();
@@ -79,10 +82,11 @@ export default function App() {
         <br />
         <input type="password" placeholder="Enter Password" />
         <br />
-        <button disabled={pending}>{pending? 'Submitting' : 'Submit'}</button>
+        <button disabled={pending}>{pending? 'Submitting...' : 'Submit'}</button>
       </div>
     )
   }
+
   return (
     <>
       <h1>useFormStatus Hooks in React js 19</h1>
@@ -92,3 +96,77 @@ export default function App() {
     </>
   );
 }
+
+
+import { useTransition } from "react"
+
+export default function App() {
+  const [pending, startTransition] = useTransition()
+  const handleButton = async () => {
+    startTransition (async ()=> {
+      await new Promise(res=>setTimeout(res, 10000))
+    })
+    
+  }
+  return(
+    <>
+      <h1>useTransition method in reactjs</h1>
+      {
+        pending?
+        <img src="https://media1.tenor.com/m/UnFx-k_lSckAAAAC/amalie-steiness.gif" />
+        :null
+      }
+      <button disabled={pending} onClick={handleButton}>Click</button>
+    </>
+  )
+}
+
+
+
+export default function App() {
+  return(
+    <>
+      <h1>Keeping components pure</h1>
+      
+      <Cup guest={1}/>
+      <Cup guest={3}/>
+
+    </>
+  )
+}
+
+const Cup = ({guest}) => {
+  let count=guest;
+  return(<h1>we have {count} guest and we have to make count {count} cap of tea</h1>)
+}
+  
+import { useState } from "react";
+function App() {
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState('');
+  const handleAddUsers=()=> {
+    setUsers([...users, user])
+  }
+  const total = users.length;
+  const last = users[users.length-1];
+  const unique = [...new Set(users)].length
+  return(
+    <div>
+      <h2>Totoal user : {total}</h2>
+      <h2>last user : {last}</h2>
+      <h2>unnique user : {unique}</h2>
+
+
+      <input onChange={(event)=>setUser(event.target.value)} type="text" />
+      <button onClick={handleAddUsers}>Add User</button>
+      {
+        users.map((item, index)=>(
+          <h4 key={index}>{item}</h4>
+        ))
+      }
+    </div>
+  )
+}
+export default App;
+
+*/

@@ -170,3 +170,47 @@ function App() {
 export default App;
 
 */
+
+import { useActionState } from "react"
+
+
+// useActionState Hook
+
+export default function App() {
+
+  const handleSubmit= async (previousData, formData)=> {
+    let name = formData.get('name');
+    let password = formData.get('password')
+    await new Promise(res=>setTimeout(res,3000))
+    console.log("handle the form",name,password);
+    
+    if (name && password) {
+      return {message: 'successfully login'}
+    } else {
+      return {error: 'Invalid name and password'}
+    }
+  }
+
+  const [data, action, pending] = useActionState(handleSubmit, undefined)
+  console.log(data);
+  
+  return(
+    <>
+      <form action={action}>
+        <input type="text" placeholder="Enter the name" name="name" />
+        <br />
+        <br />
+        <input type="password" placeholder="Enter the password" name="password" />
+        <br />
+        <br />
+        <button disabled={pending}>Submit data</button>
+        {
+          data?.error && <span style={{color: 'red'}}>{data?.error}</span>
+        }
+        {
+          data?.message && <span style={{color: 'green'}}>{data?.message}</span>
+        }
+      </form>
+    </>
+  )
+}

@@ -169,48 +169,80 @@ function App() {
 }
 export default App;
 
-*/
 
-import { useActionState } from "react"
 
+import { useActionState } from "react";
 
 // useActionState Hook
 
 export default function App() {
+  const handleSubmit = async (previousData, formData) => {
+    let name = formData.get("name");
+    let password = formData.get("password");
+    await new Promise((res) => setTimeout(res, 3000));
+    console.log("handle the form", name, password);
 
-  const handleSubmit= async (previousData, formData)=> {
-    let name = formData.get('name');
-    let password = formData.get('password')
-    await new Promise(res=>setTimeout(res,3000))
-    console.log("handle the form",name,password);
-    
     if (name && password) {
-      return {message: 'successfully login'}
+      return { message: "successfully login", name, password };
     } else {
-      return {error: 'Invalid name and password'}
+      return { error: "Invalid name and password", name, password };
     }
-  }
+  };
 
-  const [data, action, pending] = useActionState(handleSubmit, undefined)
+  const [data, action, pending] = useActionState(handleSubmit, undefined);
   console.log(data);
-  
-  return(
+
+  return (
     <>
       <form action={action}>
-        <input type="text" placeholder="Enter the name" name="name" />
+        <input type="text" placeholder="Enter the name" name="name" defaultValue={data?.name}/>
         <br />
         <br />
-        <input type="password" placeholder="Enter the password" name="password" />
+        <input
+          type="password"
+          placeholder="Enter the password"
+          name="password"
+          defaultValue={data?.password}
+        />
         <br />
         <br />
-        <button disabled={pending}>Submit data</button>
-        {
-          data?.error && <span style={{color: 'red'}}>{data?.error}</span>
-        }
-        {
-          data?.message && <span style={{color: 'green'}}>{data?.message}</span>
-        }
+        <button disabled={pending}>{pending? 'Submiting...' : 'Submit'}</button>
+      </form>
+      {data?.error && <span style={{ color: "red" }}>{data?.error}</span>}
+      {data?.message && <span style={{ color: "green" }}>{data?.message}</span>}
+      <h3>name: {data?.name}</h3>
+      <h3>password: {data?.password}</h3>
+    </>
+  );
+}
+
+
+import { useId } from "react";
+
+export default function App() {
+  return (<>
+    <UserForm />
+  </>);
+}
+
+function UserForm() {
+  const user = useId();
+  return (
+    <>
+      <form action="">
+        <label htmlFor={name}>Enter the Name </label>
+        <input id={user+"name"} type="text" placeholder="enter the name" />
+        <br /> <br />
+        <label htmlFor={user+"password"}>Enter the Password</label>
+        <input id={user+"password"} type="password" placeholder="Enter the password" />
+        <br /> <br />
+        <label htmlFor={user+"skills"}>Enter user skills</label>
+        <input id={user+"skills"} type="text" placeholder="enter the skills" />
+        <br /> <br />
+        <input id={user+"terms"} type="checkbox" />
+        <label htmlFor={user+"terms"}>Terms and conditions</label>
       </form>
     </>
-  )
+  );
 }
+*/

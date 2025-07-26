@@ -1,0 +1,6 @@
+// creating the Context first 
+
+import { createContext } from "react";
+
+// here we create the context data to deliver it to the data to the subject.
+export const SubjectContext = createContext("Maths")

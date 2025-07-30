@@ -21,8 +21,9 @@ export default function App() {
       <Routes>
         <Route element={<NavBar />}>
           <Route path="/" element={<Home />} />
-          <Route path="/users" element={<UserList />} />
-          <Route path="/users/:id" element={<UserDetails />}/>
+          <Route path="/users/list?" element={<UserList />} />
+          {/* adding coolon here is helps to open in segments like it can open at id or name or both only condition is to add the question mark at the end */}
+          <Route path="/users/:id/:name?" element={<UserDetails />}/>
           
           
           <Route path="in">

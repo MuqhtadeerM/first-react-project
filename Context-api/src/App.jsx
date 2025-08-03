@@ -26,7 +26,7 @@ function App() {
           <option value="Hindi">Hindi</option>
         </select>
 
-        <h1>Contect API</h1>
+        <h1>Context API</h1>
         <College />
       </SubjectContext.Provider>
 
